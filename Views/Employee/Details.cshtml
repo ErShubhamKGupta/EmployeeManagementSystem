@@ -1,0 +1,47 @@
+@model DotNetCore.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmpCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmpCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+    </dl>
+</div>
+<div class="form-row col-md-6">
+    <div class="form-group col-md-3">
+        <a asp-action="AddOrEdit" asp-route-id="@Model.EmployeeID" class="btn btn-primary btn-sm"><i class="fa fa-edit fa-lg">Update</i></a>
+    </div>
+    <div class="form-group col-md-3">
+        <a asp-action="Index" class="btn btn-secondary btn-info btn-sm"><i class="fa fa-table"></i> Back to List</a>
+    </div>
+</div>
+
